@@ -14,12 +14,12 @@ export default function Home() {
     <>
       {/* ── قسم الرئيسي ── */}
       <section className="hero">
-        <img src="/tower.png" alt="برج الفاتح" className="hero-img" />
+        <img src="/tower.png" alt="برج الفتحي" className="hero-img" />
         <div className="hero-bg" />
         <div className="hero-content">
           <div className="hero-badge">✦ برج سكني فاخر</div>
           <h1 className="hero-title">
-            مرحباً بكم في <span className="gold">برج الفاتح</span>
+            مرحباً بكم في <span className="gold">برج الفتحي</span>
           </h1>
           <p className="hero-subtitle">
             حيث تلتقي الفخامة بالأناقة. استمتع بأسلوب حياة استثنائي
@@ -60,16 +60,16 @@ export default function Home() {
       <section className="section section-navy">
         <div className="about-grid">
           <div className="about-img-wrap">
-            <img src="/tower.png" alt="واجهة برج الفاتح" />
+            <img src="/tower.png" alt="واجهة برج الفتحي" />
             <div className="about-img-overlay" />
-            <div className="about-img-tag">برج الفاتح</div>
+            <div className="about-img-tag">برج الفتحي</div>
           </div>
 
           <div className="about-text">
             <span className="section-tag">عن البرج</span>
             <h2>معيار جديد لـ<span style={{ color: 'var(--gold)' }}>السكن الفاخر</span></h2>
             <p>
-              برج الفاتح مشروع سكني متميز يُعيد تعريف مفهوم الحياة الحضرية.
+              برج الفتحي مشروع سكني متميز يُعيد تعريف مفهوم الحياة الحضرية.
               بواجهته المذهبة الأنيقة ومساحاته المصممة بعناية، يقف البرج
               رمزاً للتطور المعماري والرقي العصري.
             </p>
@@ -104,10 +104,10 @@ export default function Home() {
         <div className="message-banner">
           <span className="section-tag">وعدنا لكم</span>
           <blockquote>
-            "برج الفاتح أكثر من مجرد مبنى — إنه وطن ومجتمع ورسالة.
+            "برج الفتحي أكثر من مجرد مبنى — إنه وطن ومجتمع ورسالة.
             نحن ملتزمون بتوفير حياة مريحة وآمنة وراقية لكل ساكن."
           </blockquote>
-          <cite>— إدارة برج الفاتح</cite>
+          <cite>— إدارة برج الفتحي</cite>
         </div>
       </section>
 
@@ -134,7 +134,7 @@ export default function Home() {
       {/* ── دعوة للتواصل ── */}
       <section className="section section-navy2" style={{ textAlign: 'center' }}>
         <span className="section-tag">تواصل معنا</span>
-        <h2 className="section-title">هل أنت مستعد لتسمية <span style={{ color: 'var(--gold)' }}>الفاتح</span> وطناً؟</h2>
+        <h2 className="section-title">هل أنت مستعد لتسمية <span style={{ color: 'var(--gold)' }}>الفتحي</span> وطناً؟</h2>
         <p className="section-desc" style={{ marginBottom: '2.5rem' }}>
           فريقنا مستعد لمساعدتك في العثور على الوحدة المثالية.
           تواصل معنا اليوم وابدأ رحلتك نحو السكن الفاخر.

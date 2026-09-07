@@ -43,7 +43,7 @@ export default function Contact() {
             </div>
             <div className="contact-info-text">
               <strong>العنوان</strong>
-              <span>شارع الفاتح، وسط المدينة<br />المملكة العربية السعودية</span>
+              <span>شارع الفتحي، وسط المدينة<br />المملكة العربية السعودية</span>
             </div>
           </div>
 

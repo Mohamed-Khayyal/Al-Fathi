@@ -25,11 +25,11 @@ export default function Login() {
 
   return (
     <div className="login-page">
-      {/* اللوحة اليسرى - صورة البرج */}
+      {/* اللوحة اليسرى - صورة المشروع */}
       <div className="login-left">
-        <img src="/tower.png" alt="برج الفتحي" />
+        <img src="/tower.png" alt="شركة الفتحي للتطوير العقاري" />
         <div className="login-left-overlay">
-          <h2>برج الفتحي</h2>
+          <h2>شركة الفتحي للتطوير العقاري</h2>
           <p>بوابة السكان والإدارة</p>
         </div>
       </div>
@@ -37,7 +37,7 @@ export default function Login() {
       {/* اللوحة اليمنى - نموذج تسجيل الدخول */}
       <div className="login-right">
         <div className="login-box">
-          <div className="login-logo">برج الفتحي</div>
+          <div className="login-logo">شركة الفتحي</div>
           <h1>مرحباً بعودتك</h1>
           <p className="subtitle">سجّل الدخول إلى حساب السكان الخاص بك</p>
 

@@ -25,8 +25,8 @@ export default function Navbar() {
     <>
       <nav className={`navbar${scrolled ? ' navbar-scrolled' : ''}`}>
         <NavLink to="/" className="navbar-brand" onClick={close}>
-          <span className="brand-al">برج </span>
-          <span className="brand-fathi">الفتحي</span>
+          <span className="brand-al">شركة الفتحي </span>
+          <span className="brand-fathi">للتطوير العقاري</span>
         </NavLink>
 
         <ul className="nav-links">
@@ -52,8 +52,7 @@ export default function Navbar() {
       <aside className={`drawer${menuOpen ? ' drawer-open' : ''}`}>
         <div className="drawer-top">
           <span className="drawer-brand">
-            <span className="brand-al">برج </span>
-            <span className="brand-fathi">الفتحي</span>
+            <span className="brand-al">شركة الفتحي</span>
           </span>
           <button className="drawer-close-btn" onClick={close} aria-label="إغلاق القائمة">✕</button>
         </div>

@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
+import { useLang } from '../context/LanguageContext'
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled]  = useState(false)
   const location = useLocation()
+  const { t, toggleLang } = useLang()
 
   useEffect(() => { setMenuOpen(false) }, [location])
 
@@ -24,48 +26,54 @@ export default function Navbar() {
   return (
     <>
       <nav className={`navbar${scrolled ? ' navbar-scrolled' : ''}`}>
-        <NavLink to="/" className="navbar-brand" onClick={close}>
-          <span className="brand-al">شركة الفتحي </span>
-          <span className="brand-fathi">للتطوير العقاري</span>
+        {/* Logo */}
+        <NavLink to="/" className="navbar-logo-link" onClick={close}>
+          <img src="/logo.jpg" alt="شركة الفتحي للمقاولات" className="navbar-logo" />
         </NavLink>
 
+        {/* Desktop links */}
         <ul className="nav-links">
-          <li><NavLink to="/" end>الرئيسية</NavLink></li>
-          <li><NavLink to="/contact">تواصل معنا</NavLink></li>
-          <li><NavLink to="/login" className="nav-btn">تسجيل الدخول</NavLink></li>
+          <li><NavLink to="/" end>{t.home}</NavLink></li>
+          <li><NavLink to="/contact">{t.contact}</NavLink></li>
+          <li>
+            <button className="lang-toggle" onClick={toggleLang}>
+              🌐 {t.toggleLang}
+            </button>
+          </li>
+          <li><NavLink to="/login" className="nav-btn">{t.login}</NavLink></li>
         </ul>
 
+        {/* Hamburger */}
         <button
           className={`hamburger${menuOpen ? ' open' : ''}`}
           onClick={() => setMenuOpen(v => !v)}
-          aria-label="فتح القائمة"
+          aria-label="toggle menu"
         >
           <span /><span /><span />
         </button>
       </nav>
 
+      {/* Backdrop */}
       <div
         className={`drawer-backdrop${menuOpen ? ' backdrop-visible' : ''}`}
         onClick={close}
       />
 
+      {/* Mobile Drawer */}
       <aside className={`drawer${menuOpen ? ' drawer-open' : ''}`}>
         <div className="drawer-top">
-          <span className="drawer-brand">
-            <span className="brand-al">شركة الفتحي</span>
-          </span>
-          <button className="drawer-close-btn" onClick={close} aria-label="إغلاق القائمة">✕</button>
+          <img src="/logo.jpg" alt="شركة الفتحي" className="drawer-logo" />
+          <button className="drawer-close-btn" onClick={close} aria-label="close">✕</button>
         </div>
 
         <nav className="drawer-nav">
-          <NavLink to="/" end onClick={close}>
-            <span>🏠</span> الرئيسية
-          </NavLink>
-          <NavLink to="/contact" onClick={close}>
-            <span>📬</span> تواصل معنا
-          </NavLink>
+          <NavLink to="/" end onClick={close}>🏠 {t.home}</NavLink>
+          <NavLink to="/contact" onClick={close}>📬 {t.contact}</NavLink>
+          <button className="drawer-lang-btn" onClick={() => { toggleLang(); close() }}>
+            🌐 {t.toggleLang}
+          </button>
           <NavLink to="/login" className="drawer-login" onClick={close}>
-            تسجيل الدخول ←
+            {t.login} →
           </NavLink>
         </nav>
       </aside>

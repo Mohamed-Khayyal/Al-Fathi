@@ -57,15 +57,59 @@ img { max-width: 100%; display: block; }
   background: rgba(10, 22, 40, 0.98);
 }
 
-.navbar-brand {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
-  font-weight: 700;
-  z-index: 1001;
-  text-decoration: none;
+/* Navbar logo image */
+.navbar-logo-link { display: flex; align-items: center; z-index: 1001; flex-shrink: 0; }
+.navbar-logo {
+  height: 52px; width: auto;
+  object-fit: contain; border-radius: 8px;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
 }
-.brand-al    { color: var(--gold); }
-.brand-fathi { color: var(--white); }
+
+/* Language toggle button */
+.lang-toggle {
+  background: rgba(212,168,67,0.12);
+  border: 1px solid rgba(212,168,67,0.35);
+  color: var(--gold);
+  padding: 0.35rem 0.9rem; border-radius: 50px;
+  font-size: 0.85rem; font-weight: 600;
+  cursor: pointer; transition: all 0.2s;
+  font-family: 'Tajawal', sans-serif;
+  white-space: nowrap;
+}
+.lang-toggle:hover { background: rgba(212,168,67,0.22); border-color: var(--gold); }
+
+/* Drawer logo */
+.drawer-logo { height: 44px; width: auto; object-fit: contain; border-radius: 6px; }
+
+/* Drawer language button */
+.drawer-lang-btn {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.9rem 1rem; border-radius: 10px;
+  font-size: 1rem; font-weight: 500; color: var(--gold);
+  background: rgba(212,168,67,0.08);
+  border: 1px solid rgba(212,168,67,0.2);
+  cursor: pointer; transition: background 0.2s;
+  font-family: 'Tajawal', sans-serif; width: 100%;
+  text-align: inherit;
+}
+.drawer-lang-btn:hover { background: rgba(212,168,67,0.15); }
+
+/* Login page logos */
+.login-overlay-logo {
+  height: 70px; width: auto; object-fit: contain;
+  margin-bottom: 1rem; border-radius: 10px;
+}
+.login-form-logo {
+  height: 70px; width: auto; object-fit: contain;
+  margin-bottom: 1rem; border-radius: 10px;
+}
+
+/* Footer logo */
+.footer-logo {
+  height: 60px; width: auto; object-fit: contain;
+  margin-bottom: 0.8rem; border-radius: 8px;
+}
+
 
 /* Desktop nav links */
 .nav-links {
@@ -445,21 +489,65 @@ img { max-width: 100%; display: block; }
   min-height: 100vh;
   display: grid; grid-template-columns: 1fr 1fr;
 }
-.login-left { position: relative; overflow: hidden; }
-.login-left img {
-  width: 100%; height: 100%;
-  object-fit: cover; object-position: center 65%;
+.login-left {
+  position: relative; overflow: hidden;
+  background: linear-gradient(145deg, var(--navy2) 0%, var(--navy3) 50%, var(--navy) 100%);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 3rem 2.5rem;
+  gap: 0;
 }
-.login-left-overlay {
+
+/* Decorative background pattern */
+.login-left::before {
+  content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(120deg, rgba(10,22,40,0.1) 0%, rgba(10,22,40,0.65) 100%);
-  display: flex; flex-direction: column; justify-content: flex-end;
-  padding: clamp(1.5rem, 4vw, 3rem);
+  background:
+    radial-gradient(circle at 20% 80%, rgba(212,168,67,0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(212,168,67,0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Decorative corner lines */
+.login-left::after {
+  content: '';
+  position: absolute;
+  inset: 1.5rem;
+  border: 1px solid rgba(212,168,67,0.15);
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+.login-left-content {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column;
+  align-items: center; text-align: center;
+  gap: 1.5rem;
+}
+
+.login-left-logo {
+  width: min(260px, 80%);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 32px rgba(0,0,0,0.4));
+  border-radius: 16px;
+}
+
+.login-left-divider {
+  width: 60px; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.login-left-overlay {
+  text-align: center;
 }
 .login-left-overlay h2 {
-  font-size: clamp(1.3rem, 3vw, 2rem); margin-bottom: 0.5rem; color: var(--white);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  margin-bottom: 0.5rem; color: var(--white);
+  font-family: 'Tajawal', sans-serif;
 }
-.login-left-overlay p { color: rgba(255,255,255,0.75); }
+.login-left-overlay p { color: rgba(255,255,255,0.6); font-size: 0.95rem; }
+
 
 .login-right {
   background: linear-gradient(160deg, var(--navy2) 0%, var(--navy) 100%);
@@ -700,3 +788,32 @@ img { max-width: 100%; display: block; }
   .section           { padding: 2.5rem 1rem; }
 }
 
+/* ═══════════════════════════════════════════
+   LTR OVERRIDES (English mode — html[dir="ltr"])
+═══════════════════════════════════════════ */
+[dir="ltr"] body { font-family: 'Inter', sans-serif; }
+
+/* Drawer from right in LTR */
+[dir="ltr"] .drawer {
+  left: auto; right: 0;
+  border-right: none;
+  border-left: 1px solid rgba(212,168,67,0.2);
+  transform: translateX(110%);
+  box-shadow: -8px 0 40px rgba(0,0,0,0.5);
+}
+[dir="ltr"] .drawer.drawer-open { transform: translateX(0); }
+
+/* Input icons on left in LTR */
+[dir="ltr"] .input-wrap svg { right: auto; left: 0.9rem; }
+[dir="ltr"] .form-group input,
+[dir="ltr"] .form-group textarea,
+[dir="ltr"] .form-group select {
+  padding: 0.85rem 1rem 0.85rem 2.8rem;
+  text-align: left;
+}
+
+/* About image tag bottom-left */
+[dir="ltr"] .about-img-tag { left: 1rem; right: auto; }
+
+/* Form options LTR */
+[dir="ltr"] .form-options { direction: ltr; }

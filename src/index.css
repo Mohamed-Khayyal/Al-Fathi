@@ -682,6 +682,137 @@ img { max-width: 100%; display: block; }
 .contact-form-box .form-group input { padding: 0.85rem 1rem 0.85rem 2.8rem; }
 
 /* ═══════════════════════════════════════════
+/* ═══════════════════════════════════════════
+   ABOUT PAGE
+═══════════════════════════════════════════ */
+.about-page-hero {
+  padding-top: clamp(100px, 15vw, 130px);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+  padding-left: var(--px); padding-right: var(--px);
+  text-align: center;
+  background: linear-gradient(160deg, var(--navy2) 0%, var(--navy3) 50%, var(--navy) 100%);
+  border-bottom: 1px solid rgba(212,168,67,0.15);
+  position: relative; overflow: hidden;
+}
+.about-page-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 120%, rgba(212,168,67,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+.about-page-hero-content { position: relative; z-index: 1; }
+.about-page-hero h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  color: var(--white); margin-top: 0.8rem; line-height: 1.25;
+}
+.about-hero-divider {
+  width: 80px; height: 3px; margin: 1.5rem auto 0;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  border-radius: 2px;
+}
+
+/* Two-column layout */
+.about-page-grid {
+  display: grid; grid-template-columns: 1fr 1.5fr;
+  gap: clamp(2.5rem, 5vw, 4rem); align-items: center;
+  max-width: var(--container); margin: 0 auto;
+}
+
+/* Logo card (visual side) */
+.about-page-visual { display: flex; justify-content: center; }
+.about-page-logo-card {
+  position: relative;
+  background: linear-gradient(145deg, var(--navy3), var(--navy2));
+  border: 1px solid rgba(212,168,67,0.2);
+  border-radius: 20px; padding: 2.5rem;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  width: 100%; max-width: 340px;
+}
+.about-page-logo-glow {
+  position: absolute; inset: 0; border-radius: 20px;
+  background: radial-gradient(circle at 50% 50%, rgba(212,168,67,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+.about-page-logo {
+  width: 100%; max-width: 240px; height: auto;
+  object-fit: contain; border-radius: 12px; position: relative; z-index: 1;
+  filter: drop-shadow(0 4px 20px rgba(0,0,0,0.3));
+}
+
+/* Text side */
+.about-page-text { display: flex; flex-direction: column; gap: 1.2rem; }
+.about-page-welcome {
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  font-weight: 700; color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  line-height: 1.5;
+}
+.about-page-para {
+  font-size: clamp(0.95rem, 2vw, 1.08rem);
+  color: var(--text); line-height: 2;
+}
+
+/* Chairman card */
+.chairman-card {
+  margin-top: 0.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(212,168,67,0.08), rgba(212,168,67,0.03));
+  border: 1px solid rgba(212,168,67,0.25); border-radius: 14px;
+}
+.chairman-divider {
+  width: 50px; height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  margin-bottom: 1.2rem;
+}
+[dir="ltr"] .chairman-divider { background: linear-gradient(90deg, transparent, var(--gold)); }
+.chairman-info { display: flex; align-items: center; gap: 1rem; }
+.chairman-icon {
+  width: 50px; height: 50px; border-radius: 50%;
+  background: linear-gradient(135deg, rgba(212,168,67,0.2), rgba(212,168,67,0.05));
+  border: 2px solid rgba(212,168,67,0.4);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; flex-shrink: 0;
+}
+.chairman-role {
+  font-size: 0.82rem; color: var(--gold); font-weight: 600;
+  letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 0.25rem;
+}
+.chairman-name {
+  font-size: 1.2rem; font-weight: 700; color: var(--white);
+  font-family: 'Playfair Display', serif;
+}
+
+/* Values grid */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: 1.5rem;
+  max-width: var(--container); margin: 0 auto;
+}
+.value-card {
+  background: linear-gradient(145deg, var(--navy2), var(--navy3));
+  border: 1px solid rgba(212,168,67,0.1); border-radius: var(--radius);
+  padding: 2rem 1.5rem; text-align: center;
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+.value-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(212,168,67,0.4);
+  box-shadow: 0 12px 40px rgba(212,168,67,0.08);
+}
+.value-icon { font-size: 2rem; margin-bottom: 1rem; }
+.value-card h3 { color: var(--gold); font-size: 1.1rem; margin-bottom: 0.6rem; }
+.value-card p  { color: var(--text); font-size: 0.92rem; line-height: 1.75; }
+
+/* About page responsive */
+@media (max-width: 768px) {
+  .about-page-grid { grid-template-columns: 1fr; }
+  .about-page-visual { margin-bottom: 0.5rem; }
+  .about-page-logo-card { max-width: 260px; }
+}
+
+/* ═══════════════════════════════════════════
    FOOTER
 ═══════════════════════════════════════════ */
 .footer {
@@ -817,3 +948,106 @@ img { max-width: 100%; display: block; }
 
 /* Form options LTR */
 [dir="ltr"] .form-options { direction: ltr; }
+
+/* ═══════════════════════════════════════════
+   PROJECTS PAGE
+═══════════════════════════════════════════ */
+.projects-hero-sub {
+  color: var(--text); margin-top: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.8;
+}
+.projects-section-header {
+  text-align: center; margin-bottom: 2.5rem;
+  max-width: var(--container); margin-left: auto; margin-right: auto;
+}
+
+/* Video */
+.video-wrapper {
+  max-width: min(900px, 100%);
+  margin: 0 auto;
+  border-radius: 18px; overflow: hidden;
+  border: 1px solid rgba(212,168,67,0.2);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  background: #000;
+}
+.project-video {
+  width: 100%; display: block;
+  max-height: 520px; background: #000;
+}
+
+/* Brochure Card */
+.brochure-card-wrapper {
+  max-width: 700px; margin: 0 auto;
+}
+.brochure-card {
+  display: flex; align-items: center; gap: 1.5rem;
+  background: linear-gradient(135deg, var(--navy2), var(--navy3));
+  border: 1px solid rgba(212,168,67,0.25); border-radius: 18px;
+  padding: 2rem 2rem;
+  flex-wrap: wrap;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+.brochure-icon-wrap {
+  width: 72px; height: 72px; flex-shrink: 0;
+  background: linear-gradient(135deg, rgba(212,168,67,0.15), rgba(212,168,67,0.04));
+  border: 1px solid rgba(212,168,67,0.3); border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold);
+}
+.brochure-info { flex: 1; min-width: 180px; }
+.brochure-info h3 {
+  color: var(--white); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem;
+}
+.brochure-info p { color: var(--text); font-size: 0.88rem; margin-bottom: 0.6rem; }
+.brochure-meta {
+  display: flex; gap: 1rem; font-size: 0.82rem;
+  color: var(--muted);
+}
+.brochure-meta span {
+  background: rgba(255,255,255,0.06); padding: 0.2rem 0.7rem;
+  border-radius: 50px; border: 1px solid rgba(255,255,255,0.08);
+}
+.brochure-actions {
+  display: flex; gap: 0.8rem; flex-wrap: wrap; align-items: center;
+}
+.brochure-btn {
+  padding: 0.7rem 1.4rem !important;
+  font-size: 0.9rem !important; white-space: nowrap;
+}
+
+/* PDF Modal */
+.pdf-modal-backdrop {
+  position: fixed; inset: 0; z-index: 9000;
+  background: rgba(0,0,0,0.85); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 1rem;
+}
+.pdf-modal {
+  background: var(--navy2); border: 1px solid rgba(212,168,67,0.25);
+  border-radius: 16px; overflow: hidden;
+  width: min(900px, 95vw); height: min(85vh, 700px);
+  display: flex; flex-direction: column;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+}
+.pdf-modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(212,168,67,0.15);
+  color: var(--white); font-weight: 600; font-size: 0.95rem;
+  background: rgba(212,168,67,0.05);
+}
+.pdf-modal-close {
+  background: none; border: none; color: var(--muted);
+  font-size: 1.2rem; cursor: pointer; padding: 0.3rem 0.6rem;
+  border-radius: 6px; transition: color 0.2s, background 0.2s;
+}
+.pdf-modal-close:hover { color: var(--white); background: rgba(255,255,255,0.08); }
+.pdf-iframe { flex: 1; width: 100%; border: none; background: #fff; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .brochure-card { flex-direction: column; align-items: flex-start; }
+  .brochure-actions { width: 100%; }
+  .brochure-btn { flex: 1; text-align: center; }
+}

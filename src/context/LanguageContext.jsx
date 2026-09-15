@@ -7,9 +7,44 @@ const translations = {
 
     // Navbar
     home: 'الرئيسية',
+    about: 'من نحن',
+    projects: 'مشاريعنا',
     contact: 'تواصل معنا',
     login: 'تسجيل الدخول',
     toggleLang: 'English',
+
+    // Projects page
+    projectsTag: 'مشاريعنا',
+    projectsTitle: 'مشاريع شركه الفتحي',
+    projectsSubtitle: 'اكتشف مشاريعنا العقارية المتميزة — يمكنك مشاهدة الفيديو التعريفي وتحميل البروشور للاطلاع على التفاصيل الكاملة.',
+    videoTag: 'الفيديو التعريفي',
+    videoTitle: <>فيديو <span style={{ color: 'var(--gold)' }}>المشروع</span></>,
+    videoDesc: 'شاهد الفيديو التعريفي لمشروع شركه الفتحي للتطوير العقاري.',
+    videoUnsupported: 'متصفحك لا يدعم تشغيل الفيديو.',
+    brochureTag: 'البروشور',
+    brochureTitle: <>بروشور <span style={{ color: 'var(--gold)' }}>المشروع</span></>,
+    brochureDesc: 'حمّل البروشور الرسمي للاطلاع على كافة تفاصيل المشروع والوحدات المتاحة.',
+    brochureFileName: 'برشور مشروع الفتحي',
+    brochureFileDesc: 'البروشور الرسمي الشامل لمشروع شركه الفتحي للتطوير العقاري',
+    brochureView: '👁 عرض',
+    brochureDownload: 'تحميل البروشور',
+
+    // About page
+    aboutPageTag: 'من نحن',
+    aboutPageTitle: 'شركه الفتحي للتطوير العقاري',
+    aboutWelcome: 'أرحب بكم في شركه الفتحي للتطوير العقاري.',
+    aboutVision: 'أسسنا هذه الشركة برؤية واضحة وهي أن نكون شريككم الأول في رحلة البحث عن منزل الأحلام أو استثمار ناجح.',
+    aboutPromise: 'نعدكم في الفتحي بالشفافية الكاملة والالتزام والمصداقية، لأن رضاكم هو أساس نجاحنا واستمرارنا. نحن شركة ناشئة في مجال التطوير العقاري هدفنا كبير: تقديم فرص سكنية وتجارية تهتم بأدق التفاصيل، والوصول من خلالها إلى بناء ثقة العملاء.',
+    chairmanRole: 'رئيس مجلس الإدارة',
+    chairmanName: 'جميل فتحي',
+    valuesTag: 'قيمنا',
+    valuesTitle: <>ما يميّزنا عن <span style={{ color: 'var(--gold)' }}>الآخرين</span></>,
+    values: [
+      { icon: '🤝', title: 'الشفافية', desc: 'نؤمن بالوضوح الكامل في كل تعاملاتنا مع عملائنا.' },
+      { icon: '⭐', title: 'الجودة', desc: 'نلتزم بأعلى معايير الجودة في كل مشروع ننفذه.' },
+      { icon: '🏆', title: 'المصداقية', desc: 'كلمتنا عهد، والتزاماتنا راسخة لبناء ثقة طويلة الأمد.' },
+      { icon: '💡', title: 'الابتكار', desc: 'نسعى دائماً لتقديم حلول مبتكرة تلبي تطلعات عملائنا.' },
+    ],
 
     // Hero
     badge: 'تطوير عقاري متميز',
@@ -112,9 +147,44 @@ const translations = {
 
     // Navbar
     home: 'Home',
+    about: 'About Us',
+    projects: 'Our Projects',
     contact: 'Contact Us',
     login: 'Login',
     toggleLang: 'عربي',
+
+    // Projects page
+    projectsTag: 'Our Projects',
+    projectsTitle: 'Al Fathi Projects',
+    projectsSubtitle: 'Discover our distinguished real estate projects — watch the introductory video and download the brochure for full details.',
+    videoTag: 'Introductory Video',
+    videoTitle: <>Project <span style={{ color: 'var(--gold)' }}>Video</span></>,
+    videoDesc: 'Watch the introductory video for Al Fathi Real Estate Development project.',
+    videoUnsupported: 'Your browser does not support video playback.',
+    brochureTag: 'Brochure',
+    brochureTitle: <>Project <span style={{ color: 'var(--gold)' }}>Brochure</span></>,
+    brochureDesc: 'Download the official brochure for full details about the project and available units.',
+    brochureFileName: 'Al Fathi Project Brochure',
+    brochureFileDesc: 'Official comprehensive brochure for Al Fathi Real Estate Development project',
+    brochureView: '👁 View',
+    brochureDownload: 'Download Brochure',
+
+    // About page
+    aboutPageTag: 'About Us',
+    aboutPageTitle: 'Al Fathi Real Estate Development',
+    aboutWelcome: 'Welcome to Al Fathi Real Estate Development Company.',
+    aboutVision: 'We founded this company with a clear vision: to be your first partner in the journey of finding your dream home or making a successful investment.',
+    aboutPromise: 'At Al Fathi, we promise you complete transparency, commitment and credibility — because your satisfaction is the foundation of our success and continuity. We are a startup in the field of real estate development with a big goal: to provide residential and commercial opportunities that pay attention to the finest details, and through which we build lasting client trust.',
+    chairmanRole: 'Chairman of the Board',
+    chairmanName: 'Jamil Fathi',
+    valuesTag: 'Our Values',
+    valuesTitle: <>What Sets Us <span style={{ color: 'var(--gold)' }}>Apart</span></>,
+    values: [
+      { icon: '🤝', title: 'Transparency', desc: 'We believe in full clarity in all our dealings with clients.' },
+      { icon: '⭐', title: 'Quality', desc: 'We are committed to the highest quality standards in every project.' },
+      { icon: '🏆', title: 'Credibility', desc: 'Our word is our bond — our commitments are firm to build long-term trust.' },
+      { icon: '💡', title: 'Innovation', desc: 'We always strive to deliver innovative solutions that meet client aspirations.' },
+    ],
 
     // Hero
     badge: 'Real Estate Development',

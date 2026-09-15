@@ -34,6 +34,8 @@ export default function Navbar() {
         {/* Desktop links */}
         <ul className="nav-links">
           <li><NavLink to="/" end>{t.home}</NavLink></li>
+          <li><NavLink to="/about">{t.about}</NavLink></li>
+          <li><NavLink to="/projects">{t.projects}</NavLink></li>
           <li><NavLink to="/contact">{t.contact}</NavLink></li>
           <li>
             <button className="lang-toggle" onClick={toggleLang}>
@@ -68,6 +70,8 @@ export default function Navbar() {
 
         <nav className="drawer-nav">
           <NavLink to="/" end onClick={close}>🏠 {t.home}</NavLink>
+          <NavLink to="/about" onClick={close}>🏢 {t.about}</NavLink>
+          <NavLink to="/projects" onClick={close}>🏗️ {t.projects}</NavLink>
           <NavLink to="/contact" onClick={close}>📬 {t.contact}</NavLink>
           <button className="drawer-lang-btn" onClick={() => { toggleLang(); close() }}>
             🌐 {t.toggleLang}

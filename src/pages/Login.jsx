@@ -28,7 +28,7 @@ export default function Login() {
       {/* Left Panel — Logo on dark background */}
       <div className="login-left">
         <div className="login-left-content">
-          <img src="/logo.jpg" alt="شركة الفتحي للمقاولات" className="login-left-logo" />
+          <img src="/logo.jpg" alt="شركه الفتحي للتطوير العقاري والمقاولات" className="login-left-logo" />
           <div className="login-left-divider" />
           <div className="login-left-overlay">
             <h2>{t.loginOverlayTitle}</h2>

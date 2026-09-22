@@ -28,7 +28,7 @@ export default function Navbar() {
       <nav className={`navbar${scrolled ? ' navbar-scrolled' : ''}`}>
         {/* Logo */}
         <NavLink to="/" className="navbar-logo-link" onClick={close}>
-          <img src="logo.jpg" alt="شركه الفتحي للتطوير العقاري" className="navbar-logo" />
+          <img src="/logo.jpg" alt="شركه الفتحي للتطوير العقاري والمقاولات" className="navbar-logo" />
         </NavLink>
 
         {/* Desktop links */}
@@ -65,7 +65,7 @@ export default function Navbar() {
       {/* Mobile Drawer */}
       <aside className={`drawer${menuOpen ? ' drawer-open' : ''}`}>
         <div className="drawer-top">
-          <img src="logo.jpg" alt="شركه الفتحي للتطوير العقاري" className="drawer-logo" />
+          <img src="/logo.jpg" alt="شركه الفتحي للتطوير العقاري والمقاولات" className="drawer-logo" />
           <button className="drawer-close-btn" onClick={close} aria-label="close">✕</button>
         </div>
 

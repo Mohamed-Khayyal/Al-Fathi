@@ -25,22 +25,22 @@ const translations = {
     projectsSubtitle: 'اكتشف مشاريعنا العقارية المتميزة — يمكنك مشاهدة الفيديو التعريفي وتحميل البروشور للاطلاع على التفاصيل الكاملة.',
     videoTag: 'الفيديو التعريفي',
     videoTitle: <>فيديو <span style={{ color: 'var(--gold)' }}>المشروع</span></>,
-    videoDesc: 'شاهد الفيديو التعريفي لمشروع شركه الفتحي للتطوير العقاري.',
+    videoDesc: 'شاهد الفيديو التعريفي لمشروع شركه الفتحي للتطوير العقاري والمقاولات.',
     videoUnsupported: 'متصفحك لا يدعم تشغيل الفيديو.',
     brochureTag: 'البروشور',
     brochureTitle: <>بروشور <span style={{ color: 'var(--gold)' }}>المشروع</span></>,
     brochureDesc: 'حمّل البروشور الرسمي للاطلاع على كافة تفاصيل المشروع والوحدات المتاحة.',
     brochureFileName: 'برشور مشروع الفتحي',
-    brochureFileDesc: 'البروشور الرسمي الشامل لمشروع شركه الفتحي للتطوير العقاري',
+    brochureFileDesc: 'البروشور الرسمي الشامل لمشروع شركه الفتحي للتطوير العقاري والمقاولات',
     brochureView: '👁 عرض',
     brochureDownload: 'تحميل البروشور',
 
     // About page
     aboutPageTag: 'من نحن',
-    aboutPageTitle: 'شركه الفتحي للتطوير العقاري',
-    aboutWelcome: 'أرحب بكم في شركه الفتحي للتطوير العقاري.',
+    aboutPageTitle: 'شركه الفتحي للتطوير العقاري والمقاولات',
+    aboutWelcome: 'أرحب بكم في شركه الفتحي للتطوير العقاري والمقاولات.',
     aboutVision: 'أسسنا هذه الشركة برؤية واضحة وهي أن نكون شريككم الأول في رحلة البحث عن منزل الأحلام أو استثمار ناجح.',
-    aboutPromise: 'نعدكم في الفتحي بالشفافية الكاملة والالتزام والمصداقية، لأن رضاكم هو أساس نجاحنا واستمرارنا. نحن شركة ناشئة في مجال التطوير العقاري هدفنا كبير: تقديم فرص سكنية وتجارية تهتم بأدق التفاصيل، والوصول من خلالها إلى بناء ثقة العملاء.',
+    aboutPromise: 'نعدكم في الفتحي بالشفافية الكاملة والالتزام والمصداقية، لأن رضاكم هو أساس نجاحنا واستمرارنا. نحن شركة ناشئة في مجال التطوير العقاري والمقاولات هدفنا كبير: تقديم فرص سكنية وتجارية تهتم بأدق التفاصيل، والوصول من خلالها إلى بناء ثقة العملاء.',
     chairmanRole: 'رئيس مجلس الإدارة',
     chairmanName: 'جميل فتحي',
     valuesTag: 'قيمنا',
@@ -53,9 +53,9 @@ const translations = {
     ],
 
     // Hero
-    badge: 'تطوير عقاري متميز',
-    heroTitle: <>مرحباً بكم في <span className="gold">شركه الفتحي</span><br />للتطوير العقاري</>,
-    heroSubtitle: 'نُعيد تعريف مفهوم التطوير العقاري بأعلى معايير الجودة والابتكار. نبني مجتمعات متكاملة تُلبي تطلعاتكم.',
+    badge: 'تطوير عقاري ومقاولات',
+    heroTitle: <>مرحباً بكم في <span className="gold">شركه الفتحي</span><br />للتطوير العقاري والمقاولات</>,
+    heroSubtitle: 'نُعيد تعريف مفهوم التطوير العقاري والمقاولات بأعلى معايير الجودة والابتكار. نبني مجتمعات متكاملة تُلبي تطلعاتكم.',
     contactBtn: 'تواصل معنا ←',
     portalBtn: 'بوابة العملاء',
     scroll: 'للأسفل',
@@ -68,8 +68,8 @@ const translations = {
 
     // About
     aboutTag: 'عن الشركة',
-    aboutTitle: <>معيار جديد في<span style={{ color: 'var(--gold)' }}> التطوير العقاري</span></>,
-    aboutP1: 'شركه الفتحي للتطوير العقاري شركة رائدة في مجال التطوير العقاري، تسعى إلى تقديم مشاريع سكنية وتجارية متكاملة تُلبي احتياجات العملاء وتتجاوز توقعاتهم.',
+    aboutTitle: <>معيار جديد في<span style={{ color: 'var(--gold)' }}> التطوير العقاري والمقاولات</span></>,
+    aboutP1: 'شركه الفتحي للتطوير العقاري والمقاولات شركة رائدة في مجال التطوير العقاري والمقاولات، تسعى إلى تقديم مشاريع سكنية وتجارية متكاملة تُلبي احتياجات العملاء وتتجاوز توقعاتهم.',
     aboutP2: 'نعمل بأعلى معايير الجودة والشفافية، مستخدمين أحدث تقنيات البناء وأفضل المواد لضمان مشاريع تدوم وتُبهر.',
     f1: 'تطوير مشاريع سكنية وتجارية متكاملة',
     f2: 'تصاميم معمارية عصرية تجمع الجمال بالوظيفة',
@@ -79,8 +79,8 @@ const translations = {
 
     // Quote
     quoteTag: 'وعدنا لكم',
-    quote: '"شركه الفتحي للتطوير العقاري أكثر من مجرد شركة — إنها التزام بالجودة والأمان وبناء مستقبل أفضل لكل عميل."',
-    quoteCite: '— إدارة شركه الفتحي للتطوير العقاري',
+    quote: '"شركه الفتحي للتطوير العقاري والمقاولات أكثر من مجرد شركة — إنها التزام بالجودة والأمان وبناء مستقبل أفضل لكل عميل."',
+    quoteCite: '— إدارة شركه الفتحي للتطوير العقاري والمقاولات',
 
     // Services
     servicesTag: 'خدماتنا',
@@ -101,7 +101,7 @@ const translations = {
     ctaDesc: 'فريقنا من المتخصصين جاهز لمساعدتك في اختيار أفضل الفرص العقارية. تواصل معنا اليوم.',
 
     // Login
-    loginOverlayTitle: 'شركه الفتحي للتطوير العقاري',
+    loginOverlayTitle: 'شركه الفتحي للتطوير العقاري والمقاولات',
     loginOverlaySubtitle: 'بوابة العملاء والإدارة',
     loginLogo: 'شركه الفتحي',
     loginTitle: 'مرحباً بعودتك',
@@ -140,7 +140,7 @@ const translations = {
     sendSuccess: '✓ شكراً لك! تم إرسال رسالتك بنجاح. سنتواصل معك قريباً.',
 
     // Footer
-    footerDesc: 'شركة رائدة في التطوير العقاري، نبني مجتمعات متكاملة بمعايير جودة لا تُضاهى.',
+    footerDesc: 'شركة رائدة في التطوير العقاري والمقاولات، نبني مجتمعات متكاملة بمعايير جودة لا تُضاهى.',
     quickLinks: 'روابط سريعة',
     contactInfoTitle: 'معلومات التواصل',
     footerAddress: 'خلف مجلس مدينه فاقوس، متفرع من طريق كفر العدوي، محافظة الشرقية، مصر',
@@ -171,22 +171,22 @@ const translations = {
     projectsSubtitle: 'Discover our distinguished real estate projects — watch the introductory video and download the brochure for full details.',
     videoTag: 'Introductory Video',
     videoTitle: <>Project <span style={{ color: 'var(--gold)' }}>Video</span></>,
-    videoDesc: 'Watch the introductory video for Al Fathi Real Estate Development project.',
+    videoDesc: 'Watch the introductory video for Al Fathi Real Estate Development & Contracting project.',
     videoUnsupported: 'Your browser does not support video playback.',
     brochureTag: 'Brochure',
     brochureTitle: <>Project <span style={{ color: 'var(--gold)' }}>Brochure</span></>,
     brochureDesc: 'Download the official brochure for full details about the project and available units.',
     brochureFileName: 'Al Fathi Project Brochure',
-    brochureFileDesc: 'Official comprehensive brochure for Al Fathi Real Estate Development project',
+    brochureFileDesc: 'Official comprehensive brochure for Al Fathi Real Estate Development & Contracting project',
     brochureView: '👁 View',
     brochureDownload: 'Download Brochure',
 
     // About page
     aboutPageTag: 'About Us',
-    aboutPageTitle: 'Al Fathi Real Estate Development',
-    aboutWelcome: 'Welcome to Al Fathi Real Estate Development Company.',
+    aboutPageTitle: 'Al Fathi Real Estate Development & Contracting',
+    aboutWelcome: 'Welcome to Al Fathi Real Estate Development & Contracting Company.',
     aboutVision: 'We founded this company with a clear vision: to be your first partner in the journey of finding your dream home or making a successful investment.',
-    aboutPromise: 'At Al Fathi, we promise you complete transparency, commitment and credibility — because your satisfaction is the foundation of our success and continuity. We are a startup in the field of real estate development with a big goal: to provide residential and commercial opportunities that pay attention to the finest details, and through which we build lasting client trust.',
+    aboutPromise: 'At Al Fathi, we promise you complete transparency, commitment and credibility — because your satisfaction is the foundation of our success and continuity. We are a startup in the field of real estate development and contracting with a big goal: to provide residential and commercial opportunities that pay attention to the finest details, and through which we build lasting client trust.',
     chairmanRole: 'Chairman of the Board',
     chairmanName: 'Jamil Fathi',
     valuesTag: 'Our Values',
@@ -199,9 +199,9 @@ const translations = {
     ],
 
     // Hero
-    badge: 'Real Estate Development',
-    heroTitle: <><span className="gold">Al Fathi</span> Real Estate<br />Development Company</>,
-    heroSubtitle: 'Redefining real estate development with the highest standards of quality and innovation. We build integrated communities that fulfill your aspirations.',
+    badge: 'Real Estate Development & Contracting',
+    heroTitle: <><span className="gold">Al Fathi</span> Real Estate<br />Development & Contracting</>,
+    heroSubtitle: 'Redefining real estate development and contracting with the highest standards of quality and innovation. We build integrated communities that fulfill your aspirations.',
     contactBtn: 'Contact Us →',
     portalBtn: 'Client Portal',
     scroll: 'Scroll',
@@ -214,8 +214,8 @@ const translations = {
 
     // About
     aboutTag: 'About Us',
-    aboutTitle: <>A New Standard in <span style={{ color: 'var(--gold)' }}>Real Estate Development</span></>,
-    aboutP1: 'Al Fathi Real Estate Development Company is a leading developer committed to delivering comprehensive residential and commercial projects that meet and exceed client expectations.',
+    aboutTitle: <>A New Standard in <span style={{ color: 'var(--gold)' }}>Real Estate Development & Contracting</span></>,
+    aboutP1: 'Al Fathi Real Estate Development & Contracting Company is a leading developer committed to delivering comprehensive residential and commercial projects that meet and exceed client expectations.',
     aboutP2: 'We operate with the highest standards of quality and transparency, using the latest construction technologies and finest materials to ensure projects that last and impress.',
     f1: 'Development of integrated residential and commercial projects',
     f2: 'Modern architectural designs combining beauty and function',
@@ -225,8 +225,8 @@ const translations = {
 
     // Quote
     quoteTag: 'Our Promise',
-    quote: '"Al Fathi Real Estate Development Company is more than just a company — it is a commitment to quality, safety, and building a better future for every client."',
-    quoteCite: '— Al Fathi Real Estate Management',
+    quote: '"Al Fathi Real Estate Development & Contracting Company is more than just a company — it is a commitment to quality, safety, and building a better future for every client."',
+    quoteCite: '— Al Fathi Real Estate & Contracting Management',
 
     // Services
     servicesTag: 'Our Services',
@@ -247,7 +247,7 @@ const translations = {
     ctaDesc: 'Our team of specialists is ready to help you find the best real estate opportunities. Contact us today.',
 
     // Login
-    loginOverlayTitle: 'Al Fathi Real Estate Development',
+    loginOverlayTitle: 'Al Fathi Real Estate Development & Contracting',
     loginOverlaySubtitle: 'Client & Management Portal',
     loginLogo: 'Al Fathi',
     loginTitle: 'Welcome Back',
@@ -286,7 +286,7 @@ const translations = {
     sendSuccess: '✓ Thank you! Your message has been sent. We will get back to you shortly.',
 
     // Footer
-    footerDesc: 'A leading real estate development company, building integrated communities with unmatched quality standards.',
+    footerDesc: 'A leading real estate development and contracting company, building integrated communities with unmatched quality standards.',
     quickLinks: 'Quick Links',
     contactInfoTitle: 'Contact Info',
     footerAddress: 'Behind Faqous City Council, off Kafr Al-Adawi Road, Al-Sharqia, Egypt',

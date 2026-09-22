@@ -60,7 +60,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} شركه الفتحي للتطوير العقاري — Al Fathi Real Estate Development. {t.rights}</p>
+        <p>© {new Date().getFullYear()} شركه الفتحي للتطوير العقاري والمقاولات — Al Fathi Real Estate Development & Contracting. {t.rights}</p>
       </div>
     </footer>
   )

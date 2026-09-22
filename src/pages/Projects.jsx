@@ -63,7 +63,7 @@ export default function Projects() {
         <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
           <a
             href="/projects/brochure.pdf"
-            download="برشور-شركة-الفتحي.pdf"
+            download="برشور-شركة-الفتحي-للتطوير-العقاري-والمقاولات.pdf"
             className="btn-primary"
             style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
           >

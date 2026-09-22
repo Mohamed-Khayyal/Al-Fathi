@@ -21,7 +21,7 @@ export default function About() {
           {/* Logo / Visual side */}
           <div className="about-page-visual">
             <div className="about-page-logo-card">
-              <img src="/logo.jpg" alt="شركه الفتحي للتطوير العقاري" className="about-page-logo" />
+              <img src="/logo.jpg" alt="شركه الفتحي للتطوير العقاري والمقاولات" className="about-page-logo" />
               <div className="about-page-logo-glow" />
             </div>
           </div>

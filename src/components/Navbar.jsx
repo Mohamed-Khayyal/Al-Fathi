@@ -28,7 +28,7 @@ export default function Navbar() {
       <nav className={`navbar${scrolled ? ' navbar-scrolled' : ''}`}>
         {/* Logo */}
         <NavLink to="/" className="navbar-logo-link" onClick={close}>
-          <img src="/logo.jpg" alt="شركة الفتحي للمقاولات" className="navbar-logo" />
+          <img src="logo.jpg" alt="شركه الفتحي للتطوير العقاري" className="navbar-logo" />
         </NavLink>
 
         {/* Desktop links */}
@@ -36,6 +36,7 @@ export default function Navbar() {
           <li><NavLink to="/" end>{t.home}</NavLink></li>
           <li><NavLink to="/about">{t.about}</NavLink></li>
           <li><NavLink to="/projects">{t.projects}</NavLink></li>
+          <li><NavLink to="/investors">{t.investors}</NavLink></li>
           <li><NavLink to="/contact">{t.contact}</NavLink></li>
           <li>
             <button className="lang-toggle" onClick={toggleLang}>
@@ -64,7 +65,7 @@ export default function Navbar() {
       {/* Mobile Drawer */}
       <aside className={`drawer${menuOpen ? ' drawer-open' : ''}`}>
         <div className="drawer-top">
-          <img src="/logo.jpg" alt="شركة الفتحي" className="drawer-logo" />
+          <img src="logo.jpg" alt="شركه الفتحي للتطوير العقاري" className="drawer-logo" />
           <button className="drawer-close-btn" onClick={close} aria-label="close">✕</button>
         </div>
 
@@ -72,6 +73,7 @@ export default function Navbar() {
           <NavLink to="/" end onClick={close}>🏠 {t.home}</NavLink>
           <NavLink to="/about" onClick={close}>🏢 {t.about}</NavLink>
           <NavLink to="/projects" onClick={close}>🏗️ {t.projects}</NavLink>
+          <NavLink to="/investors" onClick={close}>💼 {t.investors}</NavLink>
           <NavLink to="/contact" onClick={close}>📬 {t.contact}</NavLink>
           <button className="drawer-lang-btn" onClick={() => { toggleLang(); close() }}>
             🌐 {t.toggleLang}

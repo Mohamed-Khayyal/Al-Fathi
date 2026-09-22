@@ -8,7 +8,7 @@ export default function Home() {
     <>
       {/* ── Hero ── */}
       <section className="hero">
-        <img src="/tower.png" alt="شركة الفتحي للمقاولات" className="hero-img" />
+        <img src="tower.png" alt="شركة الفتحي للمقاولات" className="hero-img" />
         <div className="hero-bg" />
         <div className="hero-content">
           <div className="hero-badge">✦ {t.badge}</div>

@@ -6,6 +6,7 @@ import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import About from './pages/About'
 import Projects from './pages/Projects'
+import Investors from './pages/Investors'
 import Login from './pages/Login'
 import Contact from './pages/Contact'
 
@@ -21,6 +22,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/investors" element={<Investors />} />
               <Route path="/login" element={<Login />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>

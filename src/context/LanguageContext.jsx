@@ -9,9 +9,15 @@ const translations = {
     home: 'الرئيسية',
     about: 'من نحن',
     projects: 'مشاريعنا',
+    investors: 'المستثمرين',
     contact: 'تواصل معنا',
     login: 'تسجيل الدخول',
     toggleLang: 'English',
+
+    // Investors page
+    investorsTag: 'المستثمرين',
+    investorsTitle: 'بوابة المستثمرين',
+    investorsDesc: 'هذه الصفحة قيد الإعداد. سيتم إضافة محتوى خاص بالمستثمرين قريباً.',
 
     // Projects page
     projectsTag: 'مشاريعنا',
@@ -149,9 +155,15 @@ const translations = {
     home: 'Home',
     about: 'About Us',
     projects: 'Our Projects',
+    investors: 'Investors',
     contact: 'Contact Us',
     login: 'Login',
     toggleLang: 'عربي',
+
+    // Investors page
+    investorsTag: 'Investors',
+    investorsTitle: 'Investors Portal',
+    investorsDesc: 'This page is being prepared. Investor-specific content will be added soon.',
 
     // Projects page
     projectsTag: 'Our Projects',

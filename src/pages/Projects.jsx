@@ -1,9 +1,28 @@
 import { useState } from 'react'
 import { useLang } from '../context/LanguageContext'
 
+// All 12 pages extracted from the brochure PDF
+const PROJECT_IMAGES = Array.from({ length: 12 }, (_, i) => ({
+  src: `/projects/images/page-${String(i + 1).padStart(2, '0')}.png`,
+  alt: `صفحة ${i + 1}`,
+  page: i + 1,
+}))
+
 export default function Projects() {
   const { t } = useLang()
-  const [pdfOpen, setPdfOpen] = useState(false)
+  const [lightbox, setLightbox] = useState(null) // index of open image
+
+  const openLightbox = (idx) => setLightbox(idx)
+  const closeLightbox = () => setLightbox(null)
+  const prev = () => setLightbox((i) => (i - 1 + PROJECT_IMAGES.length) % PROJECT_IMAGES.length)
+  const next = () => setLightbox((i) => (i + 1) % PROJECT_IMAGES.length)
+
+  // Keyboard navigation
+  const handleKey = (e) => {
+    if (e.key === 'Escape') closeLightbox()
+    if (e.key === 'ArrowLeft')  next()
+    if (e.key === 'ArrowRight') prev()
+  }
 
   return (
     <>
@@ -24,21 +43,15 @@ export default function Projects() {
           <h2 className="section-title">{t.videoTitle}</h2>
           <p className="section-desc">{t.videoDesc}</p>
         </div>
-
         <div className="video-wrapper">
-          <video
-            controls
-            preload="metadata"
-            className="project-video"
-            poster="/tower.png"
-          >
+          <video controls preload="metadata" className="project-video" poster="/tower.png">
             <source src="/projects/project-video.mp4" type="video/mp4" />
             {t.videoUnsupported}
           </video>
         </div>
       </section>
 
-      {/* PDF Brochure Section */}
+      {/* Brochure Images Gallery */}
       <section className="section section-navy2">
         <div className="projects-section-header">
           <span className="section-tag">{t.brochureTag}</span>
@@ -46,63 +59,71 @@ export default function Projects() {
           <p className="section-desc">{t.brochureDesc}</p>
         </div>
 
-        <div className="brochure-card-wrapper">
-          <div className="brochure-card">
-            {/* Icon */}
-            <div className="brochure-icon-wrap">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                <polyline points="14 2 14 8 20 8"/>
-                <line x1="16" y1="13" x2="8" y2="13"/>
-                <line x1="16" y1="17" x2="8" y2="17"/>
-                <polyline points="10 9 9 9 8 9"/>
-              </svg>
-            </div>
+        {/* Download button */}
+        <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+          <a
+            href="/projects/brochure.pdf"
+            download="برشور-شركة-الفتحي.pdf"
+            className="btn-primary"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
+          >
+            ⬇ {t.brochureDownload}
+          </a>
+        </div>
 
-            <div className="brochure-info">
-              <h3>{t.brochureFileName}</h3>
-              <p>{t.brochureFileDesc}</p>
-              <div className="brochure-meta">
-                <span>📄 PDF</span>
-                <span>~3.4 MB</span>
+        {/* Image Grid */}
+        <div className="brochure-gallery">
+          {PROJECT_IMAGES.map((img, idx) => (
+            <div
+              key={img.page}
+              className="brochure-img-card"
+              onClick={() => openLightbox(idx)}
+              tabIndex={0}
+              onKeyDown={(e) => e.key === 'Enter' && openLightbox(idx)}
+              role="button"
+              aria-label={img.alt}
+            >
+              <img src={img.src} alt={img.alt} loading="lazy" />
+              <div className="brochure-img-overlay">
+                <span className="brochure-img-zoom">🔍</span>
               </div>
+              <div className="brochure-img-page">{img.page}</div>
             </div>
-
-            <div className="brochure-actions">
-              {/* View inline */}
-              <button
-                className="btn-outline brochure-btn"
-                onClick={() => setPdfOpen(true)}
-              >
-                {t.brochureView}
-              </button>
-
-              {/* Download */}
-              <a
-                href="/projects/brochure.pdf"
-                download="برشور-شركة-الفتحي.pdf"
-                className="btn-primary brochure-btn"
-              >
-                ⬇ {t.brochureDownload}
-              </a>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
-      {/* PDF Viewer Modal */}
-      {pdfOpen && (
-        <div className="pdf-modal-backdrop" onClick={() => setPdfOpen(false)}>
-          <div className="pdf-modal" onClick={(e) => e.stopPropagation()}>
-            <div className="pdf-modal-header">
-              <span>{t.brochureFileName}</span>
-              <button className="pdf-modal-close" onClick={() => setPdfOpen(false)}>✕</button>
+      {/* Lightbox */}
+      {lightbox !== null && (
+        <div
+          className="lightbox-backdrop"
+          onClick={closeLightbox}
+          onKeyDown={handleKey}
+          tabIndex={-1}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div className="lightbox-inner" onClick={(e) => e.stopPropagation()}>
+            {/* Header */}
+            <div className="lightbox-header">
+              <span className="lightbox-counter">
+                {lightbox + 1} / {PROJECT_IMAGES.length}
+              </span>
+              <button className="lightbox-close" onClick={closeLightbox}>✕</button>
             </div>
-            <iframe
-              src="/projects/brochure.pdf"
-              className="pdf-iframe"
-              title="Brochure"
-            />
+
+            {/* Image */}
+            <div className="lightbox-img-wrap">
+              <img
+                src={PROJECT_IMAGES[lightbox].src}
+                alt={PROJECT_IMAGES[lightbox].alt}
+                className="lightbox-img"
+              />
+            </div>
+
+            {/* Navigation */}
+            <button className="lightbox-nav lightbox-prev" onClick={prev} aria-label="Previous">‹</button>
+            <button className="lightbox-nav lightbox-next" onClick={next} aria-label="Next">›</button>
           </div>
         </div>
       )}

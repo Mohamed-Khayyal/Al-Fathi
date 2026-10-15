@@ -31,18 +31,6 @@ export default function About() {
             <p className="about-page-welcome">{t.aboutWelcome}</p>
             <p className="about-page-para">{t.aboutVision}</p>
             <p className="about-page-para">{t.aboutPromise}</p>
-
-            {/* Chairman signature */}
-            <div className="chairman-card">
-              <div className="chairman-divider" />
-              <div className="chairman-info">
-                <div className="chairman-icon">👤</div>
-                <div>
-                  <div className="chairman-role">{t.chairmanRole}</div>
-                  <div className="chairman-name">{t.chairmanName}</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>

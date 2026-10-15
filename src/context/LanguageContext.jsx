@@ -41,8 +41,6 @@ const translations = {
     aboutWelcome: 'أرحب بكم في شركه الفتحي للتطوير العقاري والمقاولات.',
     aboutVision: 'أسسنا هذه الشركة برؤية واضحة وهي أن نكون شريككم الأول في رحلة البحث عن منزل الأحلام أو استثمار ناجح.',
     aboutPromise: 'نعدكم في الفتحي بالشفافية الكاملة والالتزام والمصداقية، لأن رضاكم هو أساس نجاحنا واستمرارنا. نحن شركة ناشئة في مجال التطوير العقاري والمقاولات هدفنا كبير: تقديم فرص سكنية وتجارية تهتم بأدق التفاصيل، والوصول من خلالها إلى بناء ثقة العملاء.',
-    chairmanRole: 'رئيس مجلس الإدارة',
-    chairmanName: 'جميل فتحي',
     valuesTag: 'قيمنا',
     valuesTitle: <>ما يميّزنا عن <span style={{ color: 'var(--gold)' }}>الآخرين</span></>,
     values: [
@@ -187,8 +185,6 @@ const translations = {
     aboutWelcome: 'Welcome to Al Fathi Real Estate Development & Contracting Company.',
     aboutVision: 'We founded this company with a clear vision: to be your first partner in the journey of finding your dream home or making a successful investment.',
     aboutPromise: 'At Al Fathi, we promise you complete transparency, commitment and credibility — because your satisfaction is the foundation of our success and continuity. We are a startup in the field of real estate development and contracting with a big goal: to provide residential and commercial opportunities that pay attention to the finest details, and through which we build lasting client trust.',
-    chairmanRole: 'Chairman of the Board',
-    chairmanName: 'Jamil Fathi',
     valuesTag: 'Our Values',
     valuesTitle: <>What Sets Us <span style={{ color: 'var(--gold)' }}>Apart</span></>,
     values: [
